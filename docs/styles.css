@@ -1,0 +1,48 @@
+/* styles.css */
+/* 移除 .sidebar 的默认内边距 */
+.sidebar {
+    padding: 0 !important; /* 使用 !important 以确保覆盖 */
+}
+
+/* 搜索框样式 */
+input[type="search"] {
+  border-radius: 30px !important; /* 椭圆形 */
+  border: 1.5px solid #42B983 !important; /* 边框颜色 */
+  padding: 0; /* 移除默认内边距 */
+  width: 250px !important; /* 宽度，可以根据需要调整 */
+  margin: 8px 20px; /* 外边距：上下 10px，左右 20px */
+  transition: border-color 0.3s !important; /* 边框颜色过渡效果 */
+}
+
+input[type="search"]:focus {
+  border-color: #42B983 !important; /* 聚焦时的边框颜色 */
+  outline: none !important; /* 移除默认的聚焦轮廓 */
+}
+
+/* 隐藏所有链接下划线 */
+a {
+    text-decoration: none; /* 取消下划线 */
+}
+
+.contributors {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 16px; /* 头像间距 */
+}
+
+.contributor {
+    display: flex;
+    flex-direction: column; /* 纵向排列 */
+    align-items: center; /* 水平居中对齐 */
+}
+
+.contributor-avatar {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    margin-bottom: 8px; /* 头像与用户名间距 */
+}
+
+.contributor-name {
+    text-align: center; /* 文字居中 */
+}

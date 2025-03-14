@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企查查</title>
+    <link rel="icon" href="../qt/ICO.ico" type="image/x-icon">
+    <style>
+        /* 背景样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url('../qt/bj.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* 半透明背景覆盖层，增加二次元柔和感 */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+
+        /* Logo 和搜索框容器 */
+        .search-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-top: -450px; /* 向上移动搜索框 */
+        }
+
+        /* Logo 样式 */
+        .logo {
+            width: 220px;
+            margin-bottom: 30px;
+        }
+
+        /* 搜索框样式 */
+        .search-box-container {
+            display: flex;
+            align-items: center;
+            width: 500px;
+            border-radius: 25px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 输入框样式 */
+        .search-box {
+            flex: 1;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #555;
+            background-color: transparent;
+        }
+
+        /* 搜索按钮样式 */
+        .search-button {
+            padding: 12px 24px;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(135deg, #f78ca0, #f9748f);
+            border: none;
+            cursor: pointer;
+            border-radius: 0 25px 25px 0;
+            transition: background-color 0.3s;
+        }
+
+        /* 按钮悬停效果 */
+        .search-button:hover {
+            background: linear-gradient(135deg, #f9748f, #f78ca0);
+        }
+        
+        /* 可爱的角标图标 */
+        .corner-decoration {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 半透明背景层 -->
+   <!-- <div class="overlay"></div> -->
+
+    <div class="search-container">
+        <!-- 二次元 Logo -->
+        <!-- <img src="" alt="Logo" class="logo"> -->
+
+        <!-- 搜索框和按钮 -->
+        <div class="search-box-container">
+            <input type="text" class="search-box" id="searchInput" placeholder="请输入要搜索的内容">
+            <button class="search-button" onclick="search()">搜索</button>
+        </div>
+    </div>
+
+    <!-- 可爱图标装饰 -->
+   <!-- <img src="" alt="装饰图标" class="corner-decoration">-->
+
+    <script>
+        // 搜索按钮功能
+        function search() {
+            const query = document.getElementById("searchInput").value;
+            const url = `https://www.qcc.com/web/search?key=${encodeURIComponent(query)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
