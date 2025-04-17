@@ -6,11 +6,11 @@
 
 <div class="contributors">
     <div class="contributor">
-        <img src="/gxb/ws.jpg" alt="" class="contributor-avatar">
+        <img src="ws.jpg" alt="" class="contributor-avatar">
         <div class="contributor-name">Www</div>
     </div>
     <div class="contributor">
-        <img src="/gxb/mbb.jpg" alt="" class="contributor-avatar">
+        <img src="mbb.jpg" alt="" class="contributor-avatar">
         <div class="contributor-name">漫北北</div>
     </div>
 </div>
